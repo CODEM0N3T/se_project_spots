@@ -1,0 +1,36 @@
+.page {
+  background-color: #fcf5e5;
+  min-height: 100vh;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.page__section {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* @media screen and (min-width: 1024px) {
+  .page {
+    background-color: #fcf5e5;
+    max-width: 100%;
+  }
+  .page__section {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+} */
+
+@media screen and (max-width: 320px) and (max-width: 630px) {
+  .page {
+    background-color: #fcf5e5;
+    min-height: 100vh;
+    width: 135vw;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+  }
+
+  .page__section {
+    max-width: 90%;
+  }
+}
