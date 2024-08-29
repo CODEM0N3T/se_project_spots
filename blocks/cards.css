@@ -13,19 +13,16 @@
   justify-content: center;
 }
 
-@media screen and (max-width: 320px) and (max-width: 630px) {
+@media screen and (min-width: 320px) and (max-width: 630px) {
   .cards {
     padding: 20px 0 60px 0;
-    border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
     display: flex;
     justify-content: center;
   }
 
   .cards__list {
     display: flex;
-    list-style-type: none;
     width: 90%;
-    justify-content: center;
     flex-wrap: wrap;
   }
 }
