@@ -34,4 +34,6 @@ Functionality:
 
 - [Link to project video](https://drive.google.com/file/d/1z6G4-mBpOJUtn1SVD0q2R8pQULiw8KWN/view?usp=drive_link)
 
+- [Link to GitHub pages](https://codem0n3t.github.io/se_project_spots/)
+
 **Images**
