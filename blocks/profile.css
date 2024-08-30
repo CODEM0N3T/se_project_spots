@@ -88,11 +88,14 @@
   margin-right: 8px;
 }
 
+.profile__copyright {
+  margin: 0 auto;
+}
+
 @media screen and (min-width: 320px) and (max-width: 630px) {
   .profile {
     padding: 20px 16px;
-    width: 80%;
-    height: 365px;
+    width: 85%;
     flex-direction: column;
     font-size: 20px;
   }
@@ -130,8 +133,7 @@
     align-items: center;
     margin: 0 auto;
     margin-top: 20px;
-    width: 288px;
-    height: 52px;
+    width: 270px;
     justify-content: center;
   }
 }
