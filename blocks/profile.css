@@ -91,7 +91,7 @@
 @media screen and (min-width: 320px) and (max-width: 630px) {
   .profile {
     padding: 20px 16px;
-    width: 85%;
+    width: 90%;
     flex-direction: column;
     font-size: 20px;
   }
