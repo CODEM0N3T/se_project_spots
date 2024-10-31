@@ -27,7 +27,7 @@
   border-radius: 8px;
 }
 
-.modal__close-btn {
+.modal__close {
   background-image: url(../images/x.svg);
   position: absolute;
   background-color: transparent;
@@ -70,8 +70,16 @@
   width: 156px;
   padding: 18px 0;
   border-radius: 8px;
+  border: 0;
   background: rgba(33, 33, 33, 1);
   color: rgba(252, 245, 229, 1);
+  transition: background 0.3s;
+  line-height: 1;
+}
+
+.modal__submit-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
