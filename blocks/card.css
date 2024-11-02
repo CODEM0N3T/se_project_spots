@@ -7,6 +7,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  width: 100%;
+  display: block;
   color: rgba(33, 33, 33, 1);
   line-height: 1.2;
   font-size: 20px;
@@ -41,6 +43,17 @@
 
 .card__like-btn:hover {
   opacity: 100%;
+}
+
+.card__like-btn_liked {
+  background-image: url("../images/liked.svg");
+  opacity: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__like-btn_liked:hover {
+  background-image: url("../images/hover_like.svg");
 }
 
 @media screen and (min-width: 320px) and (max-width: 630px) {
