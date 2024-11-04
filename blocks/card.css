@@ -58,6 +58,7 @@
   padding: 0;
   margin: 12px 0 0 0;
   cursor: pointer;
+  padding-right: 22px;
 }
 
 .card__like-btn:hover {
@@ -67,6 +68,7 @@
 .card__like-btn_liked {
   background-image: url("../images/liked.svg");
   opacity: 100%;
+  padding-right: 2px;
 }
 
 .card__like-btn_liked:hover {
