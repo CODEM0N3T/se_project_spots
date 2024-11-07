@@ -176,7 +176,7 @@
   }
 
   .modal__close {
-    top: -40px;
-    left: 255px;
+    top: 15px;
+    left: 245px;
   }
 }
