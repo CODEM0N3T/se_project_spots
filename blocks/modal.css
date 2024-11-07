@@ -172,13 +172,11 @@
   .modal__image {
     max-width: 90vw;
     max-height: 90vh;
+    display: block;
   }
 
   .modal__close {
     top: -40px;
-    left: 250px;
-  }
-
-  .modal__content_type_preview {
+    left: 255px;
   }
 }

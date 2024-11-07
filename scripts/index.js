@@ -1,4 +1,4 @@
-//card images and name
+//card images and captions that are posted on the page
 const initialCards = [
   {
     name: "Val Thorens",
@@ -60,6 +60,7 @@ const previewModalCloseBtn = previewModal.querySelector(
 const cardTemplate = document.querySelector("#card-template");
 const cardList = document.querySelector(".cards__list");
 
+//card information
 function getCardElement(data) {
   //console.log(data);
   const cardElement = cardTemplate.content
@@ -95,20 +96,17 @@ function getCardElement(data) {
   return cardElement;
 }
 
+//function to open the modal
 function openModal(modal) {
   modal.classList.add("modal_opened");
 }
 
+//function to close the modal once the "x" is clicked
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
-
-  setTimeout(() => {
-    if (modal.classList.contains("modal_closed")) {
-      modal.style.visibility = "hidden";
-    }
-  }, 300);
 }
 
+//Saves any profile changes once the user edits the profile
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = editModalNameInput.value;
@@ -116,6 +114,7 @@ function handleProfileFormSubmit(evt) {
   closeModal(editModal);
 }
 
+//Save the new post information, user can add images and add captions for the images
 function handlePostFormSubmit(evt) {
   evt.preventDefault();
 
@@ -132,31 +131,38 @@ function handlePostFormSubmit(evt) {
   closeModal(cardModal);
 }
 
+//Once edit profile is clicked the modal will open
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent.trim();
   editModalDescriptionInput.value = profileDescription.textContent.trim();
   openModal(editModal);
 });
 
+//To close edit profile
 editModalCloseBtn.addEventListener("click", () => {
   closeModal(editModal);
 });
 
+//Once new post is clicked the modal will be opened
 cardModalButton.addEventListener("click", () => {
   openModal(cardModal);
 });
 
+//To close the new post modal
 cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
 });
 
+//To close the preview image
 previewModalCloseBtn.addEventListener("click", () => {
   closeModal(previewModal);
 });
 
+//To save edit profile and new post information
 editFormElement.addEventListener("submit", handleProfileFormSubmit);
 cardForm.addEventListener("submit", handlePostFormSubmit);
 
+//adds the new card to the front of the list
 initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
