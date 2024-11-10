@@ -92,4 +92,8 @@
     height: 288px;
     background-position: center;
   }
+
+  .card__like-btn_liked {
+    padding-right: 4px;
+  }
 }
