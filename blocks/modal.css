@@ -177,6 +177,7 @@
     max-width: 90vw;
     max-height: 90vh;
     display: block;
+    margin-bottom: 8px;
   }
 
   .modal__close {
@@ -184,10 +185,13 @@
     left: 415px;
   }
 
+
+
   .modal__close_type_preview {
+    position: absolute;
     top: -40px;
-    right: 52px;
-    margin-left: 0;
+    left: auto;
+    margin-right: 50px;
   }
 
   .modal__caption {
