@@ -82,7 +82,7 @@
             aria-label="Open modal"
           ></button>
           <h2 class="modal__title">Edit Profile</h2>
-          <form name="edit-profile" class="modal__form">
+          <form name="edit-profile" class="modal__form" nonvalidate>
             <label for="profile-name-input" class="modal__label"
               >Name
               <input
@@ -127,7 +127,12 @@
             aria-label="Close modal"
           ></button>
           <h2 class="modal__title">New Post</h2>
-          <form name="modal__form" class="modal__form" id="add-card-form">
+          <form
+            name="modal__form"
+            class="modal__form"
+            id="add-card-form"
+            nonvalidate
+          >
             <label for="add-card-link-input" class="modal__label"
               >Image link
               <input
