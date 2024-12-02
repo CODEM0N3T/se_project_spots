@@ -1,41 +1,44 @@
-const showInputError = (formElement, inputElement, errorMsg) => {
-  const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
+const showInputError = (formElement, inputEl, errorMsg) => {
+  const errorMsgEl = formElement.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = errorMsg;
-  inputElement.classList.add("modal__input_type_error");
+  inputEl.classList.add("modal__input_type_error");
 };
 
-const hideInputError = (formElement, inputElement) => {
-  const errorMsgEl = formElement.querySelector(`#${inputElement.id}-error`);
+const hideInputError = (formElement, inputEl) => {
+  const errorMsgEl = formElement.querySelector(`#${inputEl.id}-error`);
   errorMsgEl.textContent = "";
-  inputElement.classList.remove("modal__input_type_error");
+  inputEl.classList.remove("modal__input_type_error");
 };
 
-const checkInputValidity = (formElement, inputElement) => {
-  if (!inputElement.validity.valid) {
-    showInputError(formElement, inputElement, inputElement.validationMessage);
+const checkInputValidity = (formElement, inputEl) => {
+  if (!inputEl.validity.valid) {
+    showInputError(formElement, inputEl, inputEl.validationMessage);
   } else {
-    hideInputError(formElement, inputElement);
+    hideInputError(formElement, inputEl);
   }
 };
 
 const hasInvalidInput = (inputList) => {
-  return inputList.some((inputElement) => {
-    return !inputElement.validity.valid;
+  return inputList.some((input) => {
+    return !input.validity.valid;
   });
 };
 
 const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
     buttonElement.disabled = true;
+    //Add a modifier class to the buttonElement to make it grey
+    //Don't forget the CSS
   } else {
     buttonElement.disabled = false;
+    //remove the disabled class
   }
 };
 
 const setEventListeners = (formElement) => {
   const inputList = Array.from(formElement.querySelectorAll(".modal__input"));
   const buttonElement = formElement.querySelector(".modal__submit-btn");
-
+  //handle initial states
   // toggleButtonState(inputList, buttonElement);
 
   inputList.forEach((inputElement) => {

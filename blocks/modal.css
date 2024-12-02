@@ -79,12 +79,6 @@
   font-size: 20px;
 }
 
-.modal__error {
-  display: block;
-  font-size: 16px;
-  color: rgba(255, 0, 0, 0.7);
-}
-
 .modal__input::placeholder {
   color: #212121;
   opacity: 30%;
@@ -92,6 +86,13 @@
 
 .modal__input:hover {
   border: 1px solid rgb(33, 33, 33);
+}
+
+.modal__error {
+  display: block;
+  font-size: 16px;
+  color: rgba(255, 0, 0, 0.7);
+  /* visibility: hidden; */
 }
 
 .modal__input_type_error {

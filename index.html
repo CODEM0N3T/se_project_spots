@@ -119,7 +119,7 @@
         </div>
       </div>
       <!--Modal information that will post new images to the page on submit-->
-      <div class="modal" id="add-card-modal">
+      <div class="modal" id="card-modal">
         <div class="modal__container">
           <button
             type="submit"
@@ -130,27 +130,27 @@
           <form
             name="modal__form"
             class="modal__form"
-            id="add-card-form"
+            id="card-form"
             nonvalidate
           >
-            <label for="add-card-link-input" class="modal__label"
+            <label for="card-link-input" class="modal__label"
               >Image link
               <input
-                id="add-card-link-input"
+                id="card-link-input"
                 type="url"
                 class="modal__input"
                 name="link"
                 placeholder="Paste a link to the picture"
                 required
               />
-              <span id="add-card-link-input-error" class="modal__error"
+              <span id="card-link-input-error" class="modal__error"
                 >Please enter a URL.</span
               >
             </label>
-            <label for="add-card-name-input" class="modal__label"
+            <label for="card-name-input" class="modal__label"
               >Caption
               <input
-                id="add-card-name-input"
+                id="card-name-input"
                 type="text"
                 class="modal__input"
                 name="name"
@@ -159,7 +159,7 @@
                 maxlength="30"
                 required
               />
-              <span id="add-card-name-input-error" class="modal__error"
+              <span id="card-name-input-error" class="modal__error"
                 >Please fill out this field.</span
               >
             </label>
