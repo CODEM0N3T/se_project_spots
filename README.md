@@ -38,7 +38,7 @@ Functionality:
 
 **Images**
 ![Desktop like button](https://github.com/user-attachments/assets/10da57a4-45a9-46a3-835f-e4e350837ef4)
-![Desktop trash button](https://github.com/user-attachments/assets/cc053a87-962e-4f82-bab3-038fe6b59796)
+![Desktop trash button](https://github.com/user-attachments/assets/48c5340a-7e55-46e5-98b4-daa8d417a3d7)
 ![Edit profile form](https://github.com/user-attachments/assets/0cdf5626-1908-4bf6-969f-28645d7633c0)
 ![New post form error](https://github.com/user-attachments/assets/3000ff0e-d163-4e21-a638-85ae3c1fe621)
 ![Desktop preview](https://github.com/user-attachments/assets/e5510f8a-bd87-4c00-bfc8-ada8baa025b6)
