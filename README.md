@@ -37,3 +37,13 @@ Functionality:
 - [Link to GitHub pages](https://codem0n3t.github.io/se_project_spots/)
 
 **Images**
+![Desktop like button](https://github.com/user-attachments/assets/10da57a4-45a9-46a3-835f-e4e350837ef4)
+![Desktop trash button](https://github.com/user-attachments/assets/fb574418-ca1c-48ec-81f6-e9f489843c38)
+![Edit profile form](https://github.com/user-attachments/assets/0cdf5626-1908-4bf6-969f-28645d7633c0)
+![New post form error](https://github.com/user-attachments/assets/3000ff0e-d163-4e21-a638-85ae3c1fe621)
+![Desktop preview](https://github.com/user-attachments/assets/e5510f8a-bd87-4c00-bfc8-ada8baa025b6)
+![Mobile liked buttons](https://github.com/user-attachments/assets/94c05ddd-0dfb-4bf6-9e89-72755a521d52)
+![Mobile 320 (error)](https://github.com/user-attachments/assets/d2f4ad34-b442-4f0d-b955-74ac495992a5)
+![Mobile preview](https://github.com/user-attachments/assets/9ed3aa69-7c8d-4b71-8468-7542b0f12878)
+
+
