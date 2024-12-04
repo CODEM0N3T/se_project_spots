@@ -129,7 +129,7 @@ function handlePostFormSubmit(evt) {
 
   cardForm.reset();
 
-  disableButton(cardSubmitButton);
+  disableButton(cardSubmitBtn, settings);
   closeModal(cardModal);
 }
 
@@ -138,10 +138,7 @@ profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent.trim();
   editModalDescriptionInput.value = profileDescription.textContent.trim();
   //optional
-  resetValidation(editFormElement, [
-    editModalNameInput,
-    editModalDescriptionInput,
-  ]);
+  resetValidation(editFormElement, settings);
   openModal(editModal);
 });
 
@@ -152,6 +149,7 @@ editModalCloseBtn.addEventListener("click", () => {
 
 //Once new post is clicked the modal will be opened
 cardModalButton.addEventListener("click", () => {
+  resetValidation(cardForm, settings);
   openModal(cardModal);
 });
 

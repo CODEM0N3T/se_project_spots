@@ -23,9 +23,9 @@ const hideInputError = (formElement, inputEl, config) => {
 
 const checkInputValidity = (formElement, inputEl, config) => {
   if (!inputEl.validity.valid) {
-    showInputError(formElement, inputEl, inputEl.validationMessage);
+    showInputError(formElement, inputEl, inputEl.validationMessage, config);
   } else {
-    hideInputError(formElement, inputEl);
+    hideInputError(formElement, inputEl, config);
   }
 };
 
@@ -35,9 +35,9 @@ const hasInvalidInput = (inputList) => {
   });
 };
 
-const toggleButtonState = (inputList, buttonElement) => {
+const toggleButtonState = (inputList, buttonElement, config) => {
   if (hasInvalidInput(inputList)) {
-    disableButton(buttonElement);
+    disableButton(buttonElement, config);
   } else {
     buttonElement.disabled = false;
     buttonElement.classList.remove(config.inactiveButtonClass);
@@ -50,11 +50,19 @@ const disableButton = (buttonElement, config) => {
 };
 
 //optional
-const resetValidation = (formElement, inputList) => {
+const resetValidation = (formElement, config) => {
+  const inputList = Array.from(
+    formElement.querySelectorAll(config.inputSelector)
+  );
+  const buttonElement = formElement.querySelector(config.submitButtonSelector);
+
   inputList.forEach((input) => {
-    hideInputError(formElement, input);
+    hideInputError(formElement, input, config);
   });
+  disableButton(buttonElement, config);
 };
+
+//ToDo - use the settings object in all functions instead of hard-codedstrings
 
 const setEventListeners = (formElement, config) => {
   const inputList = Array.from(
