@@ -97,9 +97,37 @@ function getCardElement(data) {
   return cardElement;
 }
 
+// Function to prevent modal closure on Escape or overlay click
+function preventModalClose(modal) {
+  // Prevent modal from closing on Escape key
+  const handleEscapeKey = (event) => {
+    if (event.key === "Escape" && modal.classList.contains("modal_opened")) {
+      event.preventDefault(); // Block Escape key behavior
+    }
+  };
+
+  // Prevent modal from closing on overlay click
+  const handleOverlayClick = (event) => {
+    if (event.target === modal) {
+      event.preventDefault(); // Block overlay click behavior
+    }
+  };
+
+  // Add event listeners
+  document.addEventListener("keydown", handleEscapeKey);
+  modal.addEventListener("mousedown", handleOverlayClick);
+
+  // Cleanup function to remove listeners when modal is closed
+  return () => {
+    document.removeEventListener("keydown", handleEscapeKey);
+    modal.removeEventListener("mousedown", handleOverlayClick);
+  };
+}
+
 //function to open the modal
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  preventModalClose(modal);
 }
 
 //function to close the modal once the "x" is clicked
