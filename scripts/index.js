@@ -130,7 +130,6 @@ function closeModalOnOverlayClick(modal) {
     }
   });
 }
-
 // Add overlay click functionality for each modal
 [editModal, cardModal, previewModal].forEach((modal) => {
   closeModalOnOverlayClick(modal);
