@@ -122,6 +122,20 @@ function handleEscapeKey(event) {
   }
 }
 
+// Function to close the modal when clicking on the overlay
+function closeModalOnOverlayClick(modal) {
+  modal.addEventListener("mousedown", (event) => {
+    if (event.target === modal) {
+      closeModal(modal);
+    }
+  });
+}
+
+// Add overlay click functionality for each modal
+[editModal, cardModal, previewModal].forEach((modal) => {
+  closeModalOnOverlayClick(modal);
+});
+
 //Saves any profile changes once the user edits the profile
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
