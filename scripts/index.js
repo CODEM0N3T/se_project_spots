@@ -97,42 +97,29 @@ function getCardElement(data) {
   return cardElement;
 }
 
-// Function to prevent modal closure on Escape or overlay click
-function preventModalClose(modal) {
-  // Prevent modal from closing on Escape key
-  const handleEscapeKey = (event) => {
-    if (event.key === "Escape" && modal.classList.contains("modal_opened")) {
-      event.preventDefault(); // Block Escape key behavior
-    }
-  };
-
-  // Prevent modal from closing on overlay click
-  const handleOverlayClick = (event) => {
-    if (event.target === modal) {
-      event.preventDefault(); // Block overlay click behavior
-    }
-  };
-
-  // Add event listeners
-  document.addEventListener("keydown", handleEscapeKey);
-  modal.addEventListener("mousedown", handleOverlayClick);
-
-  // Cleanup function to remove listeners when modal is closed
-  return () => {
-    document.removeEventListener("keydown", handleEscapeKey);
-    modal.removeEventListener("mousedown", handleOverlayClick);
-  };
-}
-
 //function to open the modal
 function openModal(modal) {
   modal.classList.add("modal_opened");
-  preventModalClose(modal);
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 //function to close the modal once the "x" is clicked
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  // Remove Escape key listener when no modals are open
+  if (!document.querySelector(".modal.modal_opened")) {
+    document.removeEventListener("keydown", handleEscapeKey);
+  }
+}
+
+// Function to handle Escape key
+function handleEscapeKey(event) {
+  if (event.key === "Escape") {
+    const openModal = document.querySelector(".modal.modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
 }
 
 //Saves any profile changes once the user edits the profile
