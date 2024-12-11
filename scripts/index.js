@@ -63,7 +63,6 @@ const cardList = document.querySelector(".cards__list");
 
 //card information
 function getCardElement(data) {
-  //console.log(data);
   const cardElement = cardTemplate.content
     .querySelector(".card")
     .cloneNode(true);
