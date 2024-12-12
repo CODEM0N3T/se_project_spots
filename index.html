@@ -61,7 +61,7 @@
                   <button
                     aria-label="Like card"
                     type="button"
-                    class="card__like-btn card__like-btn_liked"
+                    class="card__like-btn"
                   ></button>
                 </div>
               </li>
@@ -77,12 +77,12 @@
       <div class="modal" id="edit-modal">
         <div class="modal__container">
           <button
-            type="submit"
+            type="button"
             class="modal__close"
             aria-label="Open modal"
           ></button>
           <h2 class="modal__title">Edit Profile</h2>
-          <form name="edit-profile" class="modal__form" nonvalidate>
+          <form name="edit-profile" class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label"
               >Name
               <input
@@ -122,7 +122,7 @@
       <div class="modal" id="card-modal">
         <div class="modal__container">
           <button
-            type="submit"
+            type="button"
             class="modal__close"
             aria-label="Close modal"
           ></button>
@@ -131,7 +131,7 @@
             name="modal__form"
             class="modal__form"
             id="card-form"
-            nonvalidate
+            novalidate
           >
             <label for="card-link-input" class="modal__label"
               >Image link
