@@ -76,8 +76,6 @@ function getCardElement(data) {
   cardImageElement.src = data.link;
   cardImageElement.alt = data.name;
 
-  cardLikeButton.classList.remove("card__like-btn_liked");
-
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-btn_liked");
   });
@@ -106,9 +104,8 @@ function openModal(modal) {
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
   // Remove Escape key listener when no modals are open
-  if (!document.querySelector(".modal.modal_opened")) {
-    document.removeEventListener("keydown", handleEscapeKey);
-  }
+
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 // Function to handle Escape key
@@ -176,7 +173,6 @@ editModalCloseBtn.addEventListener("click", () => {
 
 //Once new post is clicked the modal will be opened
 cardModalButton.addEventListener("click", () => {
-  resetValidation(cardForm, settings);
   openModal(cardModal);
 });
 
