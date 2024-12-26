@@ -44,7 +44,7 @@ Tools & Environment
 
 - Figma: Used as the design blueprint to guide the development process.
 
--Visual Studio Code (VS Code):
+- Visual Studio Code (VS Code):
    * Primary development environment for writing, testing, and debugging code.
    * Integrated terminal used for managing dependencies and running local development servers.
 
