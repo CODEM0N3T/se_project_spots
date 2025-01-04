@@ -23,7 +23,7 @@ Functionality:
 
 - Interactive Modals:
     * Smooth opening and closing transitions enhance the user experience.
-    * Modals can be closed by clicking on the overlay or pressing the Escape key.
+    * Modals can be closed by clicking on the overlay or pressing the "Esc" key.
 
 - Form Validation:
     * Profile Form:
