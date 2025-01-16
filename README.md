@@ -72,6 +72,7 @@ Approach
 
 **Images**
 
+
 ![Desktop like button](https://github.com/user-attachments/assets/10da57a4-45a9-46a3-835f-e4e350837ef4)
 ![Desktop trash button](https://github.com/user-attachments/assets/48c5340a-7e55-46e5-98b4-daa8d417a3d7)
 ![Edit profile form](https://github.com/user-attachments/assets/0cdf5626-1908-4bf6-969f-28645d7633c0)
