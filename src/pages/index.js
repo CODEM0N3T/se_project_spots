@@ -1,3 +1,16 @@
+import {
+  enableValidation,
+  resetValidation,
+  disableButton,
+  settings,
+} from "../scripts/validation.js";
+
+import "./index.css";
+
+import logo from "../images/logo.svg";
+
+import avatar from "../images/avatar.jpg";
+
 //card images and captions that are posted on the page
 const initialCards = [
   {
@@ -27,6 +40,12 @@ const initialCards = [
 ];
 
 console.log(initialCards);
+
+const logoElement = document.querySelector(".header__logo");
+logoElement.src = logo;
+
+const avatarElement = document.querySelector(".profile__avatar");
+avatarElement.src = avatar;
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const cardModalButton = document.querySelector(".profile__add-btn");
@@ -195,3 +214,5 @@ initialCards.forEach((item) => {
   const cardElement = getCardElement(item);
   cardList.prepend(cardElement);
 });
+
+enableValidation(settings);
