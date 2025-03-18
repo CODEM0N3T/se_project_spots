@@ -23,7 +23,7 @@ Functionality:
 
 - Interactive Modals:
     * Smooth opening and closing transitions enhance the user experience.
-    * Modals can be closed by clicking on the overlay or pressing the Escape key.
+    * Modals can be closed by clicking on the overlay or pressing the "Esc" key.
 
 - Form Validation:
     * Profile Form:
@@ -38,13 +38,14 @@ Functionality:
 - Interactive Buttons and Hover Effects:
     * Buttons feature hover effects to provide users with visual feedback.
 
+
 **Development Process:**
 
 Tools & Environment
 
 - Figma: Used as the design blueprint to guide the development process.
 
--Visual Studio Code (VS Code):
+- Visual Studio Code (VS Code):
    * Primary development environment for writing, testing, and debugging code.
    * Integrated terminal used for managing dependencies and running local development servers.
 
@@ -68,7 +69,10 @@ Approach
 
 - [Link to GitHub pages](https://codem0n3t.github.io/se_project_spots/)
 
+
 **Images**
+
+
 ![Desktop like button](https://github.com/user-attachments/assets/10da57a4-45a9-46a3-835f-e4e350837ef4)
 ![Desktop trash button](https://github.com/user-attachments/assets/48c5340a-7e55-46e5-98b4-daa8d417a3d7)
 ![Edit profile form](https://github.com/user-attachments/assets/0cdf5626-1908-4bf6-969f-28645d7633c0)
