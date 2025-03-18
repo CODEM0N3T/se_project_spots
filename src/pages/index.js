@@ -11,6 +11,10 @@ import logo from "../images/logo.svg";
 
 import avatar from "../images/avatar.jpg";
 
+import edit from "../images/edit.svg";
+
+import plus from "../images/plus.svg";
+
 //card images and captions that are posted on the page
 const initialCards = [
   {
@@ -46,6 +50,12 @@ logoElement.src = logo;
 
 const avatarElement = document.querySelector(".profile__avatar");
 avatarElement.src = avatar;
+
+const editElement = document.querySelector(".profile__edit-btn");
+editElement.src = edit;
+
+const plusElement = document.querySelector(".profile__add-btn");
+plusElement.src = plus;
 
 const profileEditButton = document.querySelector(".profile__edit-btn");
 const cardModalButton = document.querySelector(".profile__add-btn");
