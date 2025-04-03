@@ -1,6 +1,5 @@
 # Project 3: Spots
 
-
 ### Overview
 
 - Intro
