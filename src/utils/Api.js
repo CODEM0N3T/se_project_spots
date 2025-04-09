@@ -33,7 +33,6 @@ class Api {
     });
   }
 
-  //done Todo - implement POST /cards
   createCard({ name, link }) {
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
