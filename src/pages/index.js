@@ -66,12 +66,13 @@ api
     avatarElement.src = user.avatar;
 
     cards.forEach((item) => {
-      const cardElement = getCardElement(item);
+      const cardElement = getCardElement(item, user._id);
       cardList.prepend(cardElement);
     });
   })
   .catch(console.error);
 
+//Selectors - Here I selected elements in order to add functionality
 const logoElement = document.querySelector(".header__logo");
 logoElement.src = logo;
 
@@ -133,6 +134,7 @@ const cardList = document.querySelector(".cards__list");
 
 let selectedCard, selectedCardId;
 
+//This fuction checks if the like button is active or not, and changes the status when clicked
 function handleLike(evt, id) {
   evt.preventDefault();
 
@@ -141,9 +143,9 @@ function handleLike(evt, id) {
   const isLiked = likeButton.classList.contains("card__like-btn_liked");
 
   api
-    .changeLikeStatus(id, !isLiked)
+    .changeLikeStatus(id, isLiked)
     .then(() => {
-      likeButton.classList.toggle("card__like-btn_liked");
+      likeButton.classList.toggle("card__like-btn_liked", !isLiked);
     })
     .catch(console.error);
 }
@@ -159,19 +161,17 @@ function getCardElement(data) {
   const cardLikeButton = cardElement.querySelector(".card__like-btn");
   const cardDelete = cardElement.querySelector(".card__delete");
 
-  const isLiked =
-    Array.isArray(data.likes) &&
-    data.likes.some((like) => like._id === api.userId);
+  const isLiked = data.isLiked || false;
+
+  cardNameElement.textContent = data.name;
+  cardImageElement.src = data.link;
+  cardImageElement.alt = data.name;
 
   if (isLiked) {
     cardLikeButton.classList.add("card__like-btn_liked");
   } else {
     cardLikeButton.classList.remove("card__like-btn_liked");
   }
-
-  cardNameElement.textContent = data.name;
-  cardImageElement.src = data.link;
-  cardImageElement.alt = data.name;
 
   cardLikeButton.addEventListener("click", (evt) => handleLike(evt, data._id));
 
@@ -275,9 +275,8 @@ function handlePostFormSubmit(evt) {
       setButtonText(saveButton, false);
     });
 }
-//Todo - implement loading text for all other form submissions
 
-//done TODO - finish avatar submission handaler
+//handles profile picture link submission
 function handleAvatarSubmit(evt) {
   evt.preventDefault();
 
@@ -298,6 +297,7 @@ function handleAvatarSubmit(evt) {
     });
 }
 
+//after the delete modal is open, Delete button submission
 function handleDeleteSubmit(evt) {
   evt.preventDefault();
 
@@ -319,6 +319,7 @@ function handleDeleteSubmit(evt) {
     });
 }
 
+//handles when the user clicks on delete button on the card, in or der to open the selete modal
 function handleDeleteCard(cardElement, cardId) {
   //evt.target.closest(".card").remove();
 
@@ -346,6 +347,7 @@ cardModalButton.addEventListener("click", () => {
   openModal(cardModal);
 });
 
+//Eventlisteners after selecting the element, to add functionality to buttons
 //To close the new post modal
 cardModalCloseBtn.addEventListener("click", () => {
   closeModal(cardModal);
