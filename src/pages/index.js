@@ -222,9 +222,11 @@ function closeModalOnOverlayClick(modal) {
   });
 }
 // Add overlay click functionality for each modal
-[editModal, cardModal, previewModal].forEach((modal) => {
-  closeModalOnOverlayClick(modal);
-});
+[editModal, cardModal, previewModal, deleteModal, avatarModal].forEach(
+  (modal) => {
+    closeModalOnOverlayClick(modal);
+  }
+);
 
 //Saves any profile changes once the user edits the profile
 function handleProfileFormSubmit(evt) {
