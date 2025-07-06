@@ -10,7 +10,6 @@
 
 Spots is a fully responsive and accessible web application designed to deliver an engaging user experience across different screen sizes. It features dynamic card management, form validation, and smooth modal interactions. Built using Figma wireframes as the primary design reference, this project showcases my ability to transform designs into functional and visually appealing web pages.
 
-
 Functionality:
 
 - Responsive Design:
