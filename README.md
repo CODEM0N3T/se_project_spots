@@ -1,7 +1,6 @@
 # Project 3: Spots
 
 ### Overview
-
 - Intro
 - Figma
 - Images
